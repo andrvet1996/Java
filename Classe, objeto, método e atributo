@@ -1,0 +1,69 @@
+*//INSTANCIAÇÃO InstrumentosMusica.java
+package instrumentosmusica;
+
+public class InstrumentosMusica {
+ 
+    public static void main(String[] args) {
+      //*INSTANCIAÇÃO DE OBJETO 
+      Violao i1 = new Violao ();
+      i1.afinado = true;
+      i1.cor = "escura";
+      i1.eletrico = true;
+      i1.madeira = "Jacarandá brasileiro";
+      i1.valor = 987.89f;
+      i1.afinar();
+      i1.status();
+      i1.tocar();
+      i1.conectar();
+      
+      System.out.println("-------//-------");
+      
+      //*NOVA INSTÂNCIA DE OBJETO
+      Violao i2 = new Violao ();
+      i2.afinado = false;
+      i2.cor = "clara";
+      i2.eletrico = false;
+      i2.madeira = "Abeto canadense";
+      i2.valor = 2000;
+      i2.deixarDesafinado();
+      i2.status();
+      i2.tocar();
+      i2.conectar();
+    }
+}   
+
+
+*// MÉTODOS Violao.java
+package instrumentosmusica;
+
+public class Violao {
+    //*RECEPÇÃO DE ATRIBUTOS
+    String modelo;//*Tagina ou Giannini
+    String cor; //*escura ou clara
+    String madeira; //*jacarandá brasileiro ou abeto canadense
+    float valor; 
+    boolean afinado;
+    boolean eletrico;
+    
+    //*MÉTODOS
+    void conectar(){
+        if (this.eletrico == true){
+            System.out.println("Conecte o cabo, Mané");
+        } else {
+            System.out.println("Não há captação elétrica");
+        }
+    }       
+    void afinar(){
+        this.afinado = true;
+    }
+    void deixarDesafinado(){
+        this.afinado = false;
+    }   
+    void tocar(){
+        if (this.afinado == false){
+            System.out.println("Está desafinado, afina isso aí");
+        } else {
+            System.out.println("Está afinado, bora fazer um som");
+        }
+    }   
+    void status(){
