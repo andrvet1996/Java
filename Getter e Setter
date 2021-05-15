@@ -1,0 +1,65 @@
+package instrumentosmusica2;// arquivo InstrumentosMusica2
+
+
+public class InstrumentosMusica2 {
+
+    
+    public static void main(String[] args) {
+        //INSTANCIAÇÃO DE OBJETOS
+        Violao2 i1 = new Violao2();
+        i1.setModelo("Tagima");
+        i1.setCor("clara");
+        i1.setMadeira("Jaracarandá brasileiro");
+        i1.valor = 600;
+        i1.status();               
+    }  
+}
+
+
+
+
+
+
+package instrumentosmusica2;//arquivo Violao2
+
+
+public class Violao2 {
+    //RECEPÇÃO DE ATRIBUTOS
+    private String modelo;//Tagini, Giannini 
+    private String cor;// clara, escura
+    private String madeira;// Jacarandá brasileiro ou Abeto canadense
+    public float valor;
+    
+    //METODOS
+    public String getModelo(){
+        return this.modelo; 
+    }
+    
+    public void setModelo(String m){
+        this.modelo = m;   
+    }
+    
+    public String getCor(){
+        return this.cor;
+    }
+    
+    public void setCor(String c){
+        this.cor = c;     
+    }
+    
+    public String getMadeira(){
+        return this.madeira;
+    }
+    
+    public void setMadeira(String mad){
+        this.madeira = mad;
+    }
+    
+    void status (){
+        System.out.println ("Esse violão é: ");
+        System.out.println ("Modelo: " + this.getModelo());
+        System.out.println ("Cor: " + this.getCor());
+        System.out.println ("Madeira: " + this.getMadeira());
+        System.out.println ("Valor: " + this.valor);
+    }
+}
