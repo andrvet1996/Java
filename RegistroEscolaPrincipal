@@ -1,0 +1,33 @@
+package registroescolaprincipal;
+
+public class RegistroEscolaPrincipal {
+   
+    public static void main(String[] args) {
+    //Pessoas p1 = new Pessoas;
+    HerdeiroAluno a1 = new HerdeiroAluno();
+    a1.setNome ("Fernando");
+    a1.setAnoingresso (2015);
+    a1.setIdade (16);
+    a1.setPresenca (213);
+    a1.setSexo ("M");
+    System.out.println (a1.toString());
+    a1.aprovar();
+    
+    HerdeiroTutor t1 = new HerdeiroTutor();
+    t1.setNome ("João");
+    t1.setIdade (42);
+    t1.setPresenca (11);
+    t1.setSexo ("M");
+    System.out.println (t1.toString());
+    
+   HerdeiroProfessor p1 = new HerdeiroProfessor();
+    p1.setNome ("Plínio");
+    p1.setIdade (43);
+    p1.setMateria ("História");
+    p1.setPresenca (290);
+    p1.setSalario (3600.89f);
+    t1.setSexo ("M");
+    System.out.println (p1.toString());
+    p1.fazerRelatorio();
+    } 
+}
