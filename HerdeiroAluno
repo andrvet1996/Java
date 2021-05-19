@@ -1,0 +1,26 @@
+package registroescolaprincipal;
+
+public class HerdeiroAluno extends Pessoas{
+    private int anoingresso;
+    private float nota;
+    
+    public void aprovar (){
+        System.out.println ("Aluno " + this.nome + " Aprovado");
+    }
+
+    public int getAnoingresso() {
+        return anoingresso;
+    }
+
+    public void setAnoingresso(int anoingresso) {
+        this.anoingresso = anoingresso;
+    }
+
+    public float getNota() {
+        return nota;
+    }
+
+    public void setNota(float nota) {
+        this.nota = nota;
+    }   
+}
