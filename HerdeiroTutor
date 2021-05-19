@@ -1,0 +1,4 @@
+package registroescolaprincipal;
+
+public class HerdeiroTutor extends Pessoas {//Herança pobre  
+}
