@@ -1,0 +1,8 @@
+package registroescolaprincipal;
+public class HerdeiroAlunoTerceiroColegial extends HerdeiroAluno { //extends=filha
+
+    @Override //SOBREPOSIÇÃO
+    public void usarLaboratorio() {
+        System.out.println ("Laboratorio 3º colegial: terça e quinta");
+    }  
+}
