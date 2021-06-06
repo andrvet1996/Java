@@ -1,0 +1,59 @@
+//lista ArrayList
+package alunos;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Alunos {
+
+    public static void main(String[] args) {
+        List<String> alunos = new ArrayList ();//priorizamos a interface e não seu implemento
+        alunos.add ("Douglas");
+        alunos.add ("Dabio");
+        alunos.add ("Fernando");
+        alunos.add ("Felix");
+        
+        for (String aluno : alunos){
+            System.out.println (aluno);
+        }
+        //adicionar elementos em lugares específicos do vetor
+        alunos.add (1, "Luizao");//adicionado na segunda posição com índice 1
+        System.out.println ("-----//-----");//não precisa escrever index nem element
+        for (String aluno : alunos){
+            System.out.println (aluno);
+        }
+            
+        //pegar elemento da lista
+        //nesse vetor nosso index vai de 0 a 4,ou seja, 5 elementos
+        System.out.println ("-----//-----");
+        System.out.println (alunos.get (0));//primeiro elemento da lista
+        
+        // quantos elementos há na nossa lista
+        // usamos o size para saber
+        System.out.println ("-----//-----");
+        System.out.println ("quantos há?");
+        System.out.println (alunos.size());
+        
+        //remoção da lista
+        alunos.remove ("Luizao");
+        System.out.println ("Lista atualizada");
+        System.out.println (alunos);
+        
+        //inspeção da lista
+        //usamos o contains
+        boolean haPessoa = alunos.contains ("Douglas");//é booleano, então ...
+        System.out.println ("Há essa pessoa na lista?");
+        System.out.println (haPessoa);
+        
+        //e se colocarmos elementos repetido, duplicado?
+        alunos.add ("Douglas");// o que acontece em listas? Pode haver elementos duplicados. Em set não pode.
+        System.out.println ("-----//-----");
+        System.out.println (alunos); 
+        
+        //e se eu quero uma lista ordenada, por ordem alfabética
+        //usar Collections.sort
+        System.out.println ("Lista ordenada"); 
+        Collections.sort (alunos);
+        System.out.println (alunos); 
+    }   
+}
+ 
