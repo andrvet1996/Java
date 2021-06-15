@@ -1,8 +1,0 @@
-package registroescolaprincipal;
-public class HerdeiroAlunoOitava extends HerdeiroAluno { //extends=filha
-
-    @Override //SOBREPOSIÇÃO
-    public void usarLaboratorio() {
-        System.out.println ("Laboratorio 8ª serie: segunda, quarta e sexta");
-    }  
-}
