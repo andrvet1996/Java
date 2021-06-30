@@ -1,0 +1,33 @@
+// assunto MAP
+package EixoComputacao;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Map<String, Integer> cursos = new HashMap(); //generics
+        Map<String, Integer> cursos = new TreeMap();//imprimi na ordem alfabetica
+        cursos.put ("BTI", 3);
+        cursos.put ("Ciencias de Dados", 4);
+        cursos.put ("Engenharia da Computacao", 5);
+        
+        Integer duracao = cursos.get ("Engenharia da Computacao");
+        System.out.println(duracao);
+        
+        boolean HaEsseCurso = cursos.containsKey ("Ciencias de Dados");
+        System.out.println (HaEsseCurso);
+        
+        System.out.println (cursos);
+        
+        Set<String> chaves = cursos.keySet();//retorna as chaves
+        System.out.println (chaves);
+        
+        cursos.entrySet().forEach(entrada -> {
+            System.out.println (entrada.getKey() + " possui duracao de " + entrada.getValue() + " anos");
+        });
+    }    
+}
